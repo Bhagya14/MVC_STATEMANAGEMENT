@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddCookie</title>
+</head>
+<body>
+    <div align="center">
+      @using (Html.BeginForm("AddCookie", "Home", FormMethod.Post))
+      {
+          @Html.TextBox("name","")
+          <input type="submit" value="Create a Cookie" />
+          @Html.ActionLink("Read Cookie","ReadCookie","Home")
+      }
+    </div>
+</body>
+</html>
